@@ -4,26 +4,26 @@ public class FizzBuzz {
 
     public String fizzBuzz(int num)
     {
-        String returnStatement = "";
+        StringBuilder returnStatement = new StringBuilder();
         for(int i = num; num >= i; i++)
         {
             if((i%3==0) && i%5==0)
             {
-                returnStatement += "FizzBuzz\n" ;
+                returnStatement.append("FizzBuzz\n");
             }
             else if(i%3==0)
             {
-                returnStatement += "Fizz\n";
+                returnStatement.append("Fizz\n");
             }
             else if(i%5==0)
             {
-                returnStatement +="Buzz\n";
+                returnStatement.append("Buzz\n");
             }
             else
             {
-                returnStatement += i + "\n";
+                returnStatement.append(i).append("\n");
             }
         }
-        return returnStatement;
+        return returnStatement.toString();
     }
 }
